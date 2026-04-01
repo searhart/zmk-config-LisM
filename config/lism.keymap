@@ -1,17 +1,18 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 200
-
+#include <input/processors.dtsi>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/mouse.h>
+
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 200
 
 &mt {
     tapping-term-ms = <300>;
     flavor = "balanced";
 };
 
-#include <input/processors.dtsi>
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
+
 
 / {
     trackball_listener: trackball_listener {
