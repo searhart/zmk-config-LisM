@@ -1,8 +1,13 @@
+/* / { ... } の外側に書くことで、他の全ての定義が終わった後に適用させます */
+&trackball {
+    status = "okay";
+};
+
 / {
-    trackball_listener: trackball_listener {
+    /* 念のため、ノードが存在する場合のみ有効になるように記述 */
+    trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        /* トラックボールを動かしたらレイヤー5（mouse_layer）へ。1秒(1000ms)動きがなければ戻る */
         input-processors = <&zip_temp_layer 5 1000>;
     };
 };
