@@ -1,9 +1,9 @@
 #include <input/processors.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/mouse.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 200
 
@@ -66,7 +66,7 @@
 &kp Q             &kp W         &kp E         &kp R           &kp T                                        &kp Y        &kp U           &kp I         &kp O          &lt 6 P
 &mt LCTRL A       &mt LALT S    &mt LSHIFT D  &mt LGUI F      &mt LCTRL G                                  &mt RCTRL H  &mt RGUI J      &mt RSHIFT K  &mt RALT L     &lt 7 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V           &kp B                                        &kp N        &kp M           &kp COMMA     &kp DOT        &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp LS(LG(N4))  &ek          &lt 1 SPACE    &lt 1 BACKSPACE  &lt 4 ENTER  &kp LS(LG(N4))  &kp DEL       &kp SEMICOLON  &kp ESC
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp LS(LG(N4))  &ek          &lt 3 SPACE    &lt 1 BACKSPACE  &lt 2 ENTER  &kp LS(LG(N4))  &kp DEL       &kp SEMICOLON  &lt 4 ESC
             >;
 
             sensor-bindings = <&encoder_msc SCRL_DOWN SCRL_UP>;
@@ -85,10 +85,10 @@
         layer_2 {
             display-name = "Number Layer";
             bindings = <
-&trans        &kp NUMBER_7       &kp NUMBER_8         &kp NUMBER_9       &kp EQUAL                          &kp F9     &kp F10  &kp F11          &kp F12      &trans
-&kp ASTERISK  &mt LALT NUMBER_4  &mt LSHIFT NUMBER_5  &mt LGUI NUMBER_6  &mt LCTRL MINUS                    &kp F5     &kp F6   &kp F7           &kp F8       &kp RIGHT_SHIFT
-&kp SLASH     &kp NUMBER_1       &kp NUMBER_2         &kp NUMBER_3       &kp PLUS                           &kp F1     &kp F2   &kp F3           &kp F4       &kp RCTRL
-&trans        &kp DOT            &kp NUMBER_0         &trans             &kp LANG2        &trans    &trans  &kp LANG1  &trans   &kp RS(RC(TAB))  &kp RC(TAB)  &kp ESC
+&trans        &kp NUMBER_7       &kp NUMBER_8         &kp NUMBER_9       &kp EQUAL                          &kp F9  &kp F10  &kp F11          &kp F12      &trans
+&kp ASTERISK  &mt LALT NUMBER_4  &mt LSHIFT NUMBER_5  &mt LGUI NUMBER_6  &mt LCTRL MINUS                    &kp F5  &kp F6   &kp F7           &kp F8       &kp RIGHT_SHIFT
+&kp SLASH     &kp NUMBER_1       &kp NUMBER_2         &kp NUMBER_3       &kp PLUS                           &kp F1  &kp F2   &kp F3           &kp F4       &kp RCTRL
+&trans        &kp DOT            &kp NUMBER_0         &trans             &trans           &trans    &trans  &trans  &trans   &kp RS(RC(TAB))  &kp RC(TAB)  &kp ESC
             >;
 
             sensor-bindings = <&encoder_kp C_VOL_UP C_VOL_DN>;
