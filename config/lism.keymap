@@ -22,17 +22,6 @@
     };
 };
 
-behaviors {
-    ek: eisu_kana {
-        compatible = "zmk,behavior-tap-dance";
-        label = "Eisu / Kana";
-        #binding-cells = <0>;
-        bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
-
-        tapping-term-ms = <250>;
-    };
-};
-
 &lt { quick-tap-ms = <300>; };
 
 / {
@@ -48,6 +37,17 @@ behaviors {
                 <&kp E>,
                 <&macro_release>,
                 <&kp CAPSLOCK>;
+        };
+    };
+
+    behaviors {
+        ek: eisu_kana {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Eisu / Kana";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
+
+            tapping-term-ms = <250>;
         };
     };
 
