@@ -4,8 +4,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-// 外部モジュールではなく、自分で作ったファイルを読み込む
-#include "jis_keys.h"
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 200
 
@@ -77,9 +75,9 @@
         layer_1 {
             display-name = "Mark Layer";
             bindings = <
-&kp EXCL    &kp J_QUOT    &kp HASH    &kp DLLR    &kp PRCNT                               &kp AMPS    &kp SQT     &kp J_LPAR  &kp J_RPAR  &kp J_EQUAL
-&emoji      &trans        &kp J_SEMI  &kp J_COLON &trans                                  &kp LBRC    &kp RBRC    &kp J_LBKT  &kp J_RBKT  &kp TILDE
-&trans      &kp J_YEN     &kp J_HAT   &kp PIPE    &trans                                  &kp LT      &kp GT      &kp PIPE    &kp QUESTION &kp J_UNDER
+&kp EXCL    &kp LS(N2)    &kp HASH    &kp DLLR    &kp PRCNT                               &kp AMPS    &kp LS(N7)   &kp LS(N8)   &kp LS(N9)   &kp LS(N0)
+&emoji      &trans        &kp SEMI    &kp SQT     &trans                                  &kp LS(LBKT) &kp LS(RBKT) &kp LBKT     &kp RBKT     &kp LS(EQUAL)
+&trans      &kp INT_YEN   &kp EQUAL   &kp LS(INT_YEN) &trans                              &kp LT      &kp GT       &kp PIPE     &kp QUESTION &kp INT_RO
 &trans      &trans        &trans      &trans      &ek         &trans    &trans    &trans  &trans      &trans      &trans      &trans
             >;
         };
