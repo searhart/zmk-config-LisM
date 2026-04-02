@@ -75,10 +75,10 @@
         layer_1 {
             display-name = "Mark Layer";
             bindings = <
-&kp EXCL   &kp DQT    &kp HASH   &kp DLLR   &kp PRCNT            &kp AMPS   &kp SQT    &kp LPAR   &kp RPAR   &kp EQUAL
-&emoji        &trans        &kp SEMI   &kp COLON  &trans                  &kp LBRC   &kp RBRC   &kp LBKT   &kp RBKT   &kp YEN
-&trans        &trans        &kp CARET  &kp PIPE   &trans                  &kp LT     &kp GT     &kp PIPE   &kp QUESTION &kp UNDER
-&trans        &trans        &trans        &trans        &ek     &trans  &trans  &trans        &trans        &trans        &trans        &trans
+&kp EXCL  &kp DQT  &kp HASH   &kp DLLR   &kp PRCNT                    &kp AMPS  &kp SQT   &kp LPAR  &kp RPAR      &kp EQUAL
+&emoji    &trans   &kp SEMI   &kp COLON  &trans                       &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT      &kp TILDE
+&trans    &trans   &kp CARET  &kp PIPE   &trans                       &kp LT    &kp GT    &kp PIPE  &kp QUESTION  &kp UNDER
+&trans    &trans   &trans     &trans     &ek        &trans    &trans  &trans    &trans    &trans    &trans        &trans
             >;
         };
 
