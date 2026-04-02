@@ -23,11 +23,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&ls_kp CAPSLOCK>,
+                <&kp CAPSLOCK>,
                 <&macro_tap>,
-                <&ls_kp E>,
+                <&kp E>,
                 <&macro_release>,
-                <&ls_kp CAPSLOCK>;
+                <&kp CAPSLOCK>;
         };
     };
 
@@ -36,7 +36,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Eisu / Kana";
             #binding-cells = <0>;
-            bindings = <&ls_kp LANGUAGE_2>, <&ls_kp LANGUAGE_1>;
+            bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
 
             tapping-term-ms = <250>;
         };
@@ -54,7 +54,7 @@
         encoder_kp: sensor_rotate_kp {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
-            bindings = <&ls_kp>, <&ls_kp>;
+            bindings = <&kp>, <&kp>;
         };
     };
 
@@ -64,10 +64,10 @@
         default_layer {
             display-name = "Default Layer";
             bindings = <
-&ls_kp Q             &ls_kp W         &ls_kp E    &ls_kp R           &ls_kp T                                  &ls_kp Y        &ls_kp U           &ls_kp I      &ls_kp O         &lt 6 P
-&ls_kp A             &ls_kp S         &ls_kp D    &ls_kp F           &ls_kp G                                  &ls_kp H        &ls_kp J           &ls_kp K      &ls_kp L         &lt 7 MINUS
-&mt LEFT_SHIFT Z  &ls_kp X         &ls_kp C    &ls_kp V           &ls_kp B                                  &ls_kp N        &ls_kp M           &ls_kp COMMA  &ls_kp DOT       &mt RIGHT_SHIFT SLASH
-&ls_kp LCTRL         &ls_kp LEFT_ALT  &ls_kp TAB  &ls_kp LS(LG(N4))  &ek    &lt 3 SPACE    &lt 1 BACKSPACE  &lt 2 ENTER  &ls_kp LS(LG(N4))  &ls_kp DEL    &ls_kp LEFT_WIN  &lt 4 ESC
+&kp Q             &kp W         &kp E    &kp R           &kp T                                  &kp Y        &kp U           &kp I      &kp O         &lt 6 P
+&kp A             &kp S         &kp D    &kp F           &kp G                                  &kp H        &kp J           &kp K      &kp L         &lt 7 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C    &kp V           &kp B                                  &kp N        &kp M           &kp COMMA  &kp DOT       &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp TAB  &kp LS(LG(N4))  &ek    &lt 3 SPACE    &lt 1 BACKSPACE  &lt 2 ENTER  &kp LS(LG(N4))  &kp DEL    &kp LEFT_WIN  &lt 4 ESC
             >;
 
             sensor-bindings = <&encoder_msc SCRL_DOWN SCRL_UP>;
@@ -76,9 +76,9 @@
         layer_1 {
             display-name = "Mark Layer";
             bindings = <
-&ls_kp EXCL   &ls_kp DQT    &ls_kp HASH   &ls_kp DLLR   &ls_kp PRCNT            &ls_kp AMPS   &ls_kp SQT    &ls_kp LPAR   &ls_kp RPAR   &ls_kp EQUAL
-&emoji        &trans        &ls_kp SEMI   &ls_kp COLON  &trans                  &ls_kp LBRC   &ls_kp RBRC   &ls_kp LBKT   &ls_kp RBKT   &ls_kp YEN
-&trans        &trans        &ls_kp CARET  &ls_kp PIPE   &trans                  &ls_kp LT     &ls_kp GT     &ls_kp PIPE   &ls_kp QUESTION &ls_kp UNDER
+&kp EXCL   &kp DQT    &kp HASH   &kp DLLR   &kp PRCNT            &kp AMPS   &kp SQT    &kp LPAR   &kp RPAR   &kp EQUAL
+&emoji        &trans        &kp SEMI   &kp COLON  &trans                  &kp LBRC   &kp RBRC   &kp LBKT   &kp RBKT   &kp YEN
+&trans        &trans        &kp CARET  &kp PIPE   &trans                  &kp LT     &kp GT     &kp PIPE   &kp QUESTION &kp UNDER
 &trans        &trans        &trans        &trans        &ek     &trans  &trans  &trans        &trans        &trans        &trans        &trans
             >;
         };
@@ -86,10 +86,10 @@
         layer_2 {
             display-name = "Number Layer";
             bindings = <
-&trans        &ls_kp NUMBER_7       &ls_kp NUMBER_8         &ls_kp NUMBER_9       &ls_kp EQUAL                          &ls_kp F9  &ls_kp F10  &ls_kp F11          &ls_kp F12      &trans
-&ls_kp ASTERISK  &mt LALT NUMBER_4  &mt LSHIFT NUMBER_5  &mt LGUI NUMBER_6  &mt LCTRL MINUS                    &ls_kp F5  &ls_kp F6   &ls_kp F7           &ls_kp F8       &ls_kp RIGHT_SHIFT
-&ls_kp SLASH     &ls_kp NUMBER_1       &ls_kp NUMBER_2         &ls_kp NUMBER_3       &ls_kp PLUS                           &ls_kp F1  &ls_kp F2   &ls_kp F3           &ls_kp F4       &ls_kp RCTRL
-&trans        &ls_kp DOT            &ls_kp NUMBER_0         &trans             &trans           &trans    &trans  &trans  &trans   &ls_kp RS(RC(TAB))  &ls_kp RC(TAB)  &ls_kp ESC
+&trans        &kp NUMBER_7       &kp NUMBER_8         &kp NUMBER_9       &kp EQUAL                          &kp F9  &kp F10  &kp F11          &kp F12      &trans
+&kp ASTERISK  &mt LALT NUMBER_4  &mt LSHIFT NUMBER_5  &mt LGUI NUMBER_6  &mt LCTRL MINUS                    &kp F5  &kp F6   &kp F7           &kp F8       &kp RIGHT_SHIFT
+&kp SLASH     &kp NUMBER_1       &kp NUMBER_2         &kp NUMBER_3       &kp PLUS                           &kp F1  &kp F2   &kp F3           &kp F4       &kp RCTRL
+&trans        &kp DOT            &kp NUMBER_0         &trans             &trans           &trans    &trans  &trans  &trans   &kp RS(RC(TAB))  &kp RC(TAB)  &kp ESC
             >;
 
             sensor-bindings = <&encoder_kp C_VOL_UP C_VOL_DN>;
@@ -98,10 +98,10 @@
         layer_3 {
             display-name = "allow Layer";
             bindings = <
-&ls_kp PAGE_UP  &trans    &ls_kp UP    &trans     &ls_kp PAGE_DOWN                    &ls_kp SPACE     &ls_kp RG(LEFT)  &ls_kp RG(RIGHT)  &mkp MB3      &trans
-&ls_kp HOME     &ls_kp LEFT  &ls_kp DOWN  &ls_kp RIGHT  &ls_kp END                          &ls_kp LG(UP)    &mkp MB1      &mkp MB2       &msc SCRL_UP  &msc SCRL_DOWN
-&trans       &trans    &trans    &trans     &trans                           &ls_kp LG(DOWN)  &ls_kp LEFT      &ls_kp UP         &ls_kp RIGHT     &trans
-&trans       &trans    &trans    &trans     &trans         &trans    &trans  &trans        &trans        &ls_kp DOWN       &trans        &ls_kp LG(W)
+&kp PAGE_UP  &trans    &kp UP    &trans     &kp PAGE_DOWN                    &kp SPACE     &kp RG(LEFT)  &kp RG(RIGHT)  &mkp MB3      &trans
+&kp HOME     &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                          &kp LG(UP)    &mkp MB1      &mkp MB2       &msc SCRL_UP  &msc SCRL_DOWN
+&trans       &trans    &trans    &trans     &trans                           &kp LG(DOWN)  &kp LEFT      &kp UP         &kp RIGHT     &trans
+&trans       &trans    &trans    &trans     &trans         &trans    &trans  &trans        &trans        &kp DOWN       &trans        &kp LG(W)
             >;
         };
 
