@@ -69,26 +69,26 @@
 &kp LCTRL         &kp LEFT_ALT  &kp TAB  &kp LS(LG(N4))  &ek    &lt 3 SPACE    &lt 1 BACKSPACE  &lt 2 ENTER  &kp LS(LG(N4))  &kp DEL    &kp LEFT_WIN  &lt 4 ESC
             >;
 
-            sensor-bindings = <&encoder_msc SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&encoder_msc SCRL_UP SCRL_DOWN>;
         };
 
         layer_1 {
             display-name = "Mark Layer";
             bindings = <
-&kp EXCL    &kp LS(N2)    &kp HASH    &kp DLLR    &kp PRCNT                               &kp AMPS    &kp LS(N7)   &kp LS(N8)   &kp LS(N9)   &kp LS(N0)
-&emoji      &trans        &kp SEMI    &kp SQT     &trans                                  &kp LS(LBKT) &kp LS(RBKT) &kp LBKT     &kp RBKT     &kp LS(EQUAL)
-&trans      &kp INT_YEN   &kp EQUAL   &kp LS(INT_YEN) &trans                              &kp LT      &kp GT       &kp PIPE     &kp QUESTION &kp INT_RO
-&trans      &trans        &trans      &trans      &ek         &trans    &trans    &trans  &trans      &trans      &trans      &trans
+&kp EXCL  &kp LS(N2)   &kp HASH   &kp DLLR         &kp PRCNT                    &kp AMPS      &kp LS(N7)    &kp LS(N8)  &kp LS(N9)    &kp LS(N0)
+&emoji    &trans       &kp SEMI   &kp SQT          &trans                       &kp LS(LBKT)  &kp LS(RBKT)  &kp LBKT    &kp RBKT      &kp LS(EQUAL)
+&trans    &kp INT_YEN  &kp EQUAL  &kp LS(INT_YEN)  &trans                       &kp LT        &kp GT        &kp PIPE    &kp QUESTION  &kp INT_RO
+&trans    &trans       &trans     &trans           &ek        &trans    &trans  &trans        &trans        &trans      &trans        &trans
             >;
         };
 
         layer_2 {
             display-name = "Number Layer";
             bindings = <
-&trans        &kp NUMBER_7       &kp NUMBER_8         &kp NUMBER_9       &kp EQUAL                          &kp F9  &kp F10  &kp F11          &kp F12      &trans
-&kp ASTERISK  &mt LALT NUMBER_4  &mt LSHIFT NUMBER_5  &mt LGUI NUMBER_6  &mt LCTRL MINUS                    &kp F5  &kp F6   &kp F7           &kp F8       &kp RIGHT_SHIFT
-&kp SLASH     &kp NUMBER_1       &kp NUMBER_2         &kp NUMBER_3       &kp PLUS                           &kp F1  &kp F2   &kp F3           &kp F4       &kp RCTRL
-&trans        &kp DOT            &kp NUMBER_0         &trans             &trans           &trans    &trans  &trans  &trans   &kp RS(RC(TAB))  &kp RC(TAB)  &kp ESC
+&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL                    &trans  &kp F1  &kp F2  &kp F3  &kp F10
+&kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS                    &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&kp SLASH     &kp N7        &kp N8        &kp N9        &kp PLUS                     &trans  &kp F7  &kp F8  &kp F9  &kp F12
+&trans        &kp DOT       &kp NUMBER_0  &trans        &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&encoder_kp C_VOL_UP C_VOL_DN>;
@@ -97,7 +97,7 @@
         layer_3 {
             display-name = "allow Layer";
             bindings = <
-&kp PAGE_UP  &trans    &kp UP    &trans     &kp PAGE_DOWN                    &kp SPACE     &kp RG(LEFT)  &kp RG(RIGHT)  &mkp MB3      &trans
+&kp PAGE_UP  &trans    &kp UP    &trans     &kp PAGE_DOWN                    &trans        &kp RG(LEFT)  &kp RG(RIGHT)  &mkp MB3      &trans
 &kp HOME     &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                          &kp LG(UP)    &mkp MB1      &mkp MB2       &msc SCRL_UP  &msc SCRL_DOWN
 &trans       &trans    &trans    &trans     &trans                           &kp LG(DOWN)  &kp LEFT      &kp UP         &kp RIGHT     &trans
 &trans       &trans    &trans    &trans     &trans         &trans    &trans  &trans        &trans        &kp DOWN       &trans        &kp LG(W)
@@ -119,11 +119,11 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB5  &trans    &mkp MB4  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB4  &trans    &mkp MB5  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans    &trans
             >;
 
-            sensor-bindings = <&encoder_msc SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&encoder_msc SCRL_UP SCRL_DOWN>;
         };
 
         layer_6 {
