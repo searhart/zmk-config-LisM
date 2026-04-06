@@ -63,10 +63,10 @@
         default_layer {
             display-name = "Default Layer";
             bindings = <
-&kp Q             &kp W         &kp E    &kp R           &kp T                                  &kp Y        &kp U           &kp I      &kp O         &lt 6 P
-&kp A             &kp S         &kp D    &kp F           &kp G                                  &kp H        &kp J           &kp K      &kp L         &lt 7 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C    &kp V           &kp B                                  &kp N        &kp M           &kp COMMA  &kp DOT       &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp TAB  &kp LS(LG(N4))  &ek    &lt 3 SPACE    &lt 1 BACKSPACE  &lt 2 ENTER  &kp LS(LG(N4))  &kp DEL    &kp LEFT_WIN  &lt 4 ESC
+&kp Q             &kp W         &kp E    &kp R           &kp T                                        &kp Y  &kp U           &kp I      &kp O         &lt 6 P
+&kp A             &kp S         &kp D    &kp F           &kp G                                        &kp H  &kp J           &kp K      &kp L         &lt 7 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C    &kp V           &kp B                                        &kp N  &kp M           &kp COMMA  &kp DOT       &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_ALT  &kp TAB  &kp LS(LG(N4))  &lt 1 SPACE  &lt 3 BACKSPACE    &lt 2 ENTER  &ek    &kp LS(LG(N4))  &kp DEL    &kp LEFT_WIN  &lt 4 ESC
             >;
 
             sensor-bindings = <&encoder_msc SCRL_UP SCRL_DOWN>;
@@ -78,8 +78,10 @@
 &kp EXCL  &kp LS(N2)   &kp HASH   &kp DLLR         &kp PRCNT                    &kp AMPS      &kp LS(N7)    &kp LS(N8)  &kp LS(N9)    &kp LS(N0)
 &emoji    &trans       &kp SEMI   &kp SQT          &trans                       &kp LS(LBKT)  &kp LS(RBKT)  &kp LBKT    &kp RBKT      &kp LS(EQUAL)
 &trans    &kp INT_YEN  &kp EQUAL  &kp LS(INT_YEN)  &trans                       &kp LT        &kp GT        &kp PIPE    &kp QUESTION  &kp INT_RO
-&trans    &trans       &trans     &trans           &ek        &trans    &trans  &trans        &trans        &trans      &trans        &trans
+&trans    &trans       &trans     &trans           &trans     &trans    &trans  &trans        &trans        &trans      &trans        &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_2 {
@@ -97,11 +99,13 @@
         layer_3 {
             display-name = "allow Layer";
             bindings = <
-&kp PAGE_UP  &trans    &kp UP    &trans     &kp PAGE_DOWN                    &trans        &kp RG(LEFT)  &kp RG(RIGHT)  &mkp MB3      &trans
-&kp HOME     &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                          &kp LG(UP)    &mkp MB1      &mkp MB2       &msc SCRL_UP  &msc SCRL_DOWN
-&trans       &trans    &trans    &trans     &trans                           &kp LG(DOWN)  &kp LEFT      &kp UP         &kp RIGHT     &trans
-&trans       &trans    &trans    &trans     &trans         &trans    &trans  &trans        &trans        &kp DOWN       &trans        &kp LG(W)
+&kp PAGE_UP  &trans    &kp UP    &trans     &kp PAGE_DOWN                    &kp LC(PAGE_UP)  &trans                  &kp LG(UP_ARROW)    &trans                   &kp LC(PAGE_DOWN)
+&kp HOME     &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                          &trans           &kp LG(LEFT_ARROW)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)      &trans
+&trans       &trans    &trans    &trans     &trans                           &trans           &kp LC(LG(LEFT_ARROW))  &kp LC(LG(D))       &kp LC(LG(RIGHT_ARROW))  &trans
+&trans       &trans    &trans    &trans     &trans         &trans    &trans  &trans           &trans                  &trans              &trans                   &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_4 {
@@ -134,6 +138,8 @@
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
         };
 
         layer_7 {
