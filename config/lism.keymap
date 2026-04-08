@@ -14,9 +14,8 @@
 
 &lt { quick-tap-ms = <300>; };
 
-&mkp_input_listener {
-    input-processors = <&zip_temp_layer 5 10000>;
-};
+&mkp_input_listener { input-processors = <&zip_temp_layer 5 10000>; };
+
 / {
     macros {
         emoji: emoji_macro {
@@ -142,7 +141,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
+            sensor-bindings = <&inc_dec_kp LC(LA(K_SCROLL_UP)) LA(LC(K_SCROLL_DOWN))>;
         };
 
         layer_7 {
