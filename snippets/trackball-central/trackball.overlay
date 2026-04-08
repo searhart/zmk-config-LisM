@@ -34,7 +34,6 @@
 
 /* オートマウスレイヤー（レイヤー5）の挙動カスタマイズ */
 &zip_temp_layer {
-    require-prior-idle-ms = <200>;
     /* 正しいボタン位置：J(17), K(18), L(19), M(28), DOT(30) */
     excluded-positions = <17 18 19 28 30>;
 };
