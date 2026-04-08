@@ -35,6 +35,6 @@
 /* オートマウスレイヤー（レイヤー5）の挙動カスタマイズ */
 &zip_temp_layer {
     require-prior-idle-ms = <200>;
-    /* マウスボタン（J, K, L, M, ,, .）を押している間はレイヤーを維持する */
-    excluded-positions = <17 18 19 29 31>;
+    /* 18:J, 19:K, 20:L, 30:M, 31:COMMA, 32:DOT */
+    excluded-positions = <18 19 20 30 31 32>;
 };
