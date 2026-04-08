@@ -34,8 +34,7 @@
 
 /* オートマウスレイヤー（レイヤー5）の挙動カスタマイズ */
 &zip_temp_layer {
-    input-prioritizer;            // タイピング優先
-    delay-ms = <500>;             // タイピング後の待機時間
+    require-prior-idle-ms = <200>;
     /* マウスボタン（J, K, L, M, ,, .）を押している間はレイヤーを維持する */
     excluded-positions = <17 18 19 29 31>;
 };
