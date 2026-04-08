@@ -36,8 +36,6 @@
 &zip_temp_layer {
     input-prioritizer;            // タイピング優先
     delay-ms = <500>;             // タイピング後の待機時間
-    /* 非マウスキーが押されたら、タイムアウトを待たずに即座にレイヤーを解除 */
-    rpi = <&zip_target_layer_release>;
     /* マウスボタン（J, K, L, M, ,, .）を押している間はレイヤーを維持する */
     excluded-positions = <17 18 19 29 31>;
 };
