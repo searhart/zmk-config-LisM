@@ -21,7 +21,7 @@
     device = <&trackball_central>;
     input-processors = 
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        <&zip_temp_layer 5 1500>;
+        <&zip_temp_layer 5 10000>;
     
     scroller {
         layers = <6>;
@@ -30,4 +30,14 @@
             <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)>,
             <&zip_scroll_scaler 1 16>;
     };
+};
+
+/* オートマウスレイヤー（レイヤー5）の挙動カスタマイズ */
+&zip_temp_layer {
+    input-prioritizer;            // タイピング優先
+    delay-ms = <500>;             // タイピング後の待機時間
+    /* 非マウスキーが押されたら、タイムアウトを待たずに即座にレイヤーを解除 */
+    rpi = <&zip_target_layer_release>;
+    /* マウスボタン（J, K, L, M, ,, .）を押している間はレイヤーを維持する */
+    excluded-positions = <17 18 19 29 31>;
 };
