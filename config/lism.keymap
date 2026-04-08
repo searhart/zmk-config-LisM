@@ -6,6 +6,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 /* --- 追加：解除ボタンの挙動を定義（ラベル未定義エラー対策） --- */
+
 / {
     zip_target_layer_release: zip_target_layer_release {
         compatible = "zmk,input-processor-target-layer-sideline";
@@ -149,7 +150,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(LA(K_SCROLL_UP)) LA(LC(K_SCROLL_DOWN))>;
+            sensor-bindings = <&inc_dec_kp LC(K_SCROLL_UP) LC(K_SCROLL_DOWN)>;
         };
 
         layer_7 {
